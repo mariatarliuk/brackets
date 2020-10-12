@@ -1,11 +1,11 @@
 module.exports = function check(str, bracketsConfig) {
-   let configArray = [];
+   let config = [];
    for(let i=0;i<bracketsConfig.length;i++) {
-      configArray.push(bracketsConfig[i].join(''))
+      config.push(bracketsConfig[i].join(''))
    }
-   for(let i=0; i<configArray.length;i++) {
-      if(str.replace(configArray[i], '').length!==str.length) {
-         str = str.replace(configArray[i], '');
+   for(let i=0; i<config.length;i++) {
+      if(str.replace(config[i], '').length!==str.length) {
+         str = str.replace(config[i], '');
          i=-1;
       }
    }
